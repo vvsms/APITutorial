@@ -1,0 +1,38 @@
+services:
+  apitutorial.api:
+    image: ${DOCKER_REGISTRY-}apitutorialapi
+    build:
+      context: .
+      dockerfile: src/APITutorial.API/Dockerfile
+    ports:
+        - 5288:8080
+        - 7161:8081
+    environment:
+        #seq
+        - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.seq:5341/ingest/otlp
+        - OLET_EXPORTER_OTLP_PROTOCOL=http/protobuf
+        # #Aspire Dashboard
+        # - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.aspire-dashboard:18889
+        # - OLET_EXPORTER_OTLP_PROTOCOL=grpc
+
+  apitutorial.seq:
+    image: datalust/seq:latest
+    ports:
+      - 8080:80
+      - 5341:5341      
+    environment:
+      ACCEPT_EULA: Y
+      SEQ_FIRSTRUN_ADMINUSERNAME: admin
+      SEQ_FIRSTRUN_ADMINPASSWORDHASH: $2a$12$uasXGkHivsnsuoQMcvOZbe5GSZt79gp05VI9bdFWXp90x09Bl0MHe
+      SEQ_FIRSTRUN_REQUIREAUTHENTICATIONFORHTTPINGESTION: false
+    volumes:
+      - ./.containers/seq_data:/data
+  
+  apitutorial.aspire-dashboard:
+    container_name: apitutorial.aspire-dashboard
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.1
+    ports:
+      - 18888:18888
+      - 18889:18889
+    environment:
+      DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: "true"
