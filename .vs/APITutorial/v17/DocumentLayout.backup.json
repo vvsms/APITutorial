@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,20 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\appsettings.json",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\appsettings.json",
-              "RelativeToolTip": "src\\APITutorial.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-05T21:24:12.796Z",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Program.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs*",
+              "RelativeToolTip": "src\\APITutorial.API\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T03:59:59.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "APITutorial.API.http",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\APITutorial.API.http",
               "RelativeDocumentMoniker": "src\\APITutorial.API\\APITutorial.API.http",
@@ -79,12 +79,11 @@
               "RelativeToolTip": "src\\APITutorial.API\\APITutorial.API.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-09-05T20:57:35.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-05T20:57:35.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\APITutorial.API\\appsettings.Development.json",
@@ -92,18 +91,17 @@
               "RelativeToolTip": "src\\APITutorial.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-05T20:53:14.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-05T20:53:14.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-09-05T20:37:05.575Z",
               "EditorCaption": ""

@@ -8,12 +8,12 @@ services:
         - 5288:8080
         - 7161:8081
     environment:
-        #seq
-        - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.seq:5341/ingest/otlp
-        - OLET_EXPORTER_OTLP_PROTOCOL=http/protobuf
+        # #seq
+        # - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.seq:5341/ingest/otlp
+        # - OLET_EXPORTER_OTLP_PROTOCOL=http/protobuf
         # #Aspire Dashboard
-        # - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.aspire-dashboard:18889
-        # - OLET_EXPORTER_OTLP_PROTOCOL=grpc
+        - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.aspire-dashboard:18889
+        - OLET_EXPORTER_OTLP_PROTOCOL=grpc
 
   apitutorial.seq:
     image: datalust/seq:latest
