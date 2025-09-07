@@ -1,3 +1,8 @@
+using APITutorial.API.Database;
+using APITutorial.API.Extensions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -8,9 +13,24 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable = true;
+})
+    .AddXmlDataContractSerializerFormatters();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options
+    .UseNpgsql(
+        builder.Configuration.GetConnectionString("Database"),
+        npgsqlOptions => npgsqlOptions
+            .MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.Application))
+    .UseSnakeCaseNamingConvention()
+
+);
 
 builder.Services.AddHealthChecks();
 
@@ -18,7 +38,8 @@ builder.Services.AddOpenTelemetry()
     .ConfigureResource(resource => resource.AddService(builder.Environment.ApplicationName))
     .WithTracing(tracing => tracing
         .AddHttpClientInstrumentation()
-        .AddAspNetCoreInstrumentation())
+        .AddAspNetCoreInstrumentation()
+        .AddNpgsql())
     .WithMetrics(metrics => metrics
         .AddHttpClientInstrumentation()
         .AddAspNetCoreInstrumentation()
@@ -39,6 +60,7 @@ WebApplication app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    await app.ApplyMigrations();
 }
 
 app.UseHttpsRedirection();

@@ -9,12 +9,23 @@ services:
         - 7161:8081
     environment:
         # #seq
-        # - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.seq:5341/ingest/otlp
-        # - OLET_EXPORTER_OTLP_PROTOCOL=http/protobuf
+        # - OTEL_EXPORTER_OTLP_ENDPOINT=http://apitutorial.seq:5341/ingest/otlp
+        # - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
         # #Aspire Dashboard
-        - OLET_EXPORTER_OTLP_ENDPOINT=http://apitutorial.aspire-dashboard:18889
-        - OLET_EXPORTER_OTLP_PROTOCOL=grpc
+        - OTEL_EXPORTER_OTLP_ENDPOINT=http://apitutorial.aspire-dashboard:18889
+        - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
 
+  apitutorial.postgres:
+    image: postgres:latest
+    environment:
+        POSTGRES_DB: apitutorial
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+    ports:
+        - 5432:5432
+    volumes:
+      - ./.containers/postgres_data:/var/lib/postgresql/data
+      
   apitutorial.seq:
     image: datalust/seq:latest
     ports:
