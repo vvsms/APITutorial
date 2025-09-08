@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 	  <UserSecretsId>f20a35ac-3804-4cc6-a6b8-9f800d7c5600</UserSecretsId>
@@ -9,6 +9,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="EFCore.NamingConventions" />
+		<PackageReference Include="Microsoft.AspNetCore.JsonPatch" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
 		  <PrivateAssets>all</PrivateAssets>

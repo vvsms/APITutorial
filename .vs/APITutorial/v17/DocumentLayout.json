@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\habits\\habitmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\habits\\habitmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\controllers\\habitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\habitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\habits\\updatehabitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\habits\\updatehabitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HabitsController.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:34:56.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Program.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:33:46.675Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -51,45 +73,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HabitMappings.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitMappings.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Habits\\HabitMappings.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitMappings.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Habits\\HabitMappings.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T15:01:39.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateHabitDto.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\UpdateHabitDto.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Habits\\UpdateHabitDto.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\UpdateHabitDto.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Habits\\UpdateHabitDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T14:56:47.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HabitsController.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwD4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T17:58:43.148Z",
-              "EditorCaption": ""
             }
           ]
         }
