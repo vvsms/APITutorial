@@ -77,21 +77,36 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
             return NotFound();
         }
 
-        HabitDto habitDto=habit.ToDto();    
+        HabitDto habitDto = habit.ToDto();
         patchDocument.ApplyTo(habitDto, ModelState);
-        
+
         if (!TryValidateModel(habitDto))
         {
             return ValidationProblem(ModelState);
         }
 
         habit.Name = habitDto.Name;
-        habit.Description= habitDto.Description;
-        habit.UpdatedAtUtc= DateTime.UtcNow;
+        habit.Description = habitDto.Description;
+        habit.UpdatedAtUtc = DateTime.UtcNow;
 
         await dbContext.SaveChangesAsync(cancellationToken);
 
         return NoContent();
     }
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteHabit(string id, CancellationToken cancellationToken)
+    {
+        Habit? habit = await dbContext.Habits.FirstOrDefaultAsync(h => h.Id == id, cancellationToken);
 
+        if (habit == null)
+        {
+            //return StatusCode(StatusCodes.Status410Gone); for soft delete
+            return NotFound();
+        }
+
+        dbContext.Habits.Remove(habit);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return NoContent();
+    }
 }
