@@ -25,19 +25,16 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
         return Ok(habitsCollection);
     }
 
-
     [HttpGet("{id}")]
-    public async Task<ActionResult<HabitDto>> GetHabits(string id, CancellationToken cancellationToken)
+    public async Task<ActionResult<HabitWithTagsDto>> GetHabits(string id, CancellationToken cancellationToken)
     {
-        HabitDto? habits = await dbContext.Habits
+        HabitWithTagsDto? habits = await dbContext.Habits
             .Where(h => h.Id == id)
-            .Select(HabitQueries.ProjectToDto())
+            .Select(HabitQueries.ProjectToHabitWithTagsDto())
             .FirstOrDefaultAsync(cancellationToken);
 
-        return habits == null ? (ActionResult<HabitDto>)NotFound() : (ActionResult<HabitDto>)Ok(habits);
+        return habits == null ? (ActionResult<HabitWithTagsDto>)NotFound() : (ActionResult<HabitWithTagsDto>)Ok(habits);
     }
-
-
 
     [HttpPost]
     public async Task<ActionResult<HabitDto>> CreateHabit(CreateHabitDto createHabitDto, CancellationToken cancellationToken)
@@ -67,6 +64,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
 
         return NoContent();
     }
+
     [HttpPatch("{id}")]
     public async Task<ActionResult> PatchHabit(string id, JsonPatchDocument<HabitDto> patchDocument, CancellationToken cancellationToken)
     {
@@ -93,6 +91,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
 
         return NoContent();
     }
+
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteHabit(string id, CancellationToken cancellationToken)
     {

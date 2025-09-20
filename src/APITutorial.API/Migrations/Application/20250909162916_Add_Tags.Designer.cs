@@ -3,6 +3,7 @@ using System;
 using APITutorial.API.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace APITutorial.API.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250909162916_Add_Tags")]
+    partial class Add_Tags
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,29 +76,6 @@ namespace APITutorial.API.Migrations.Application
                         .HasName("pk_habits");
 
                     b.ToTable("habits", "api_tutorial");
-                });
-
-            modelBuilder.Entity("APITutorial.API.Entities.HabitTag", b =>
-                {
-                    b.Property<string>("HabitId")
-                        .HasColumnType("character varying(500)")
-                        .HasColumnName("habit_id");
-
-                    b.Property<string>("TagId")
-                        .HasColumnType("character varying(500)")
-                        .HasColumnName("tag_id");
-
-                    b.Property<DateTime>("CreatedAtUtc")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_at_utc");
-
-                    b.HasKey("HabitId", "TagId")
-                        .HasName("pk_habit_tags");
-
-                    b.HasIndex("TagId")
-                        .HasDatabaseName("ix_habit_tags_tag_id");
-
-                    b.ToTable("habit_tags", "api_tutorial");
                 });
 
             modelBuilder.Entity("APITutorial.API.Entities.Tag", b =>
@@ -214,28 +194,6 @@ namespace APITutorial.API.Migrations.Application
 
                     b.Navigation("Target")
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("APITutorial.API.Entities.HabitTag", b =>
-                {
-                    b.HasOne("APITutorial.API.Entities.Habit", null)
-                        .WithMany("HabitTags")
-                        .HasForeignKey("HabitId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_habit_tags_habits_habit_id");
-
-                    b.HasOne("APITutorial.API.Entities.Tag", null)
-                        .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_habit_tags_tags_tag_id");
-                });
-
-            modelBuilder.Entity("APITutorial.API.Entities.Habit", b =>
-                {
-                    b.Navigation("HabitTags");
                 });
 #pragma warning restore 612, 618
         }
