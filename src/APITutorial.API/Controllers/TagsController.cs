@@ -1,9 +1,13 @@
 ﻿using APITutorial.API.Database;
 using APITutorial.API.DTOs.Tags;
 using APITutorial.API.Entities;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Validations;
 
 namespace APITutorial.API.Controllers;
 
@@ -37,16 +41,30 @@ public sealed class TagsController(ApplicationDbContext dbContext) : ControllerB
         return tags == null ? (ActionResult<TagDto>)NotFound() : (ActionResult<TagDto>)Ok(tags);
     }
 
-
-
     [HttpPost]
-    public async Task<ActionResult<TagDto>> CreateTag(CreateTagDto createTagDto, CancellationToken cancellationToken)
+    public async Task<ActionResult<TagDto>> CreateTag(CreateTagDto createTagDto, IValidator<CreateTagDto> validator, ProblemDetailsFactory problemDetailsFactory, CancellationToken cancellationToken)
     {
+
+        ValidationResult validationResult = await validator.ValidateAsync(createTagDto, cancellationToken);
+
+        if (!validationResult.IsValid)
+        {
+            ProblemDetails problem = problemDetailsFactory.CreateProblemDetails(HttpContext, StatusCodes.Status400BadRequest);
+
+            problem.Extensions.Add("errors", validationResult.ToDictionary());
+
+            return BadRequest(problem);
+        }
+
+
         var tag = createTagDto.ToEntity();
 
-        if(await dbContext.Tags.AnyAsync(h => h.Name == tag.Name, cancellationToken))
+        if (await dbContext.Tags.AnyAsync(h => h.Name == tag.Name, cancellationToken))
         {
-            return Conflict($"Tag with the name '{tag.Name}' already exists.");
+            return Problem(
+                detail: $"Tag with name '{tag.Name}' already exists.",
+                statusCode: StatusCodes.Status409Conflict
+                );
         }
 
         dbContext.Tags.Add(tag);
