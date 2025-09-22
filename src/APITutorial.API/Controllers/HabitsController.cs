@@ -15,9 +15,18 @@ namespace APITutorial.API.Controllers;
 public sealed class HabitsController(ApplicationDbContext dbContext) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<HabitsCollectionDto>> GetHabits(CancellationToken cancellationToken)
+    public async Task<ActionResult<HabitsCollectionDto>> GetHabits(HabitsQueryParameters queryParams, CancellationToken cancellationToken)
     {
-        List<HabitDto> habits = await dbContext.Habits.Select(HabitQueries.ProjectToDto())
+        string? searchTerm = queryParams.Search?.Trim().ToLowerInvariant();
+
+        List<HabitDto> habits = await dbContext.Habits.AsNoTracking()
+            .Where(x =>
+                searchTerm == null ||
+                EF.Functions.ILike(x.Name, $"%{searchTerm}%") ||
+                (x.Description != null && EF.Functions.ILike(x.Description, $"%{searchTerm}%")))
+            .Where(x => queryParams.Type == null || x.Type == queryParams.Type)
+            .Where(x => queryParams.Status == null || x.Status == queryParams.Status)
+            .Select(x => x.ToDto())
             .ToListAsync(cancellationToken);
 
         var habitsCollection = new HabitsCollectionDto
@@ -28,7 +37,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<HabitWithTagsDto>> GetHabits(string id, CancellationToken cancellationToken)
+    public async Task<ActionResult<HabitWithTagsDto>> GetHabit(string id, CancellationToken cancellationToken)
     {
         HabitWithTagsDto? habits = await dbContext.Habits
             .Where(h => h.Id == id)
@@ -41,12 +50,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
     [HttpPost]
     public async Task<ActionResult<HabitDto>> CreateHabit(CreateHabitDto createHabitDto, IValidator<CreateHabitDto> validator, CancellationToken cancellationToken)
     {
-        ValidationResult validationResult = await validator.ValidateAsync(createHabitDto, cancellationToken);
-
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.ToDictionary());
-        }
+        await validator.ValidateAndThrowAsync(createHabitDto, cancellationToken);
 
         var habit = createHabitDto.ToEntity();
         dbContext.Habits.Add(habit);

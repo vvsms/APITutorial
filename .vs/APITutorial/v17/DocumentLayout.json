@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\controllers\\habitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\habitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\habits\\habitsqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\habits\\habitsqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,26 +62,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "HabitsQueryParameters.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T10:11:04.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Middleware\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Middleware\\GlobalExceptionHandler.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Middleware\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\Middleware\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T07:34:13.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Program.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Program.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T07:28:03.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TagsController.cs",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\TagsController.cs",
               "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\TagsController.cs",
               "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\TagsController.cs",
               "RelativeToolTip": "src\\APITutorial.API\\Controllers\\TagsController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAwEEAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwEcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T05:14:02.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HabitsController.cs",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "RelativeToolTip": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwC8AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T04:45:15.183Z",
               "EditorCaption": ""
