@@ -1,9 +1,9 @@
 ﻿using APITutorial.API.Database;
+using APITutorial.API.DTOs.Common;
 using APITutorial.API.DTOs.Habits;
 using APITutorial.API.Entities;
 using APITutorial.API.Services.Sorting;
 using FluentValidation;
-using FluentValidation.Results;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,20 +16,20 @@ namespace APITutorial.API.Controllers;
 public sealed class HabitsController(ApplicationDbContext dbContext) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<HabitsCollectionDto>> GetHabits(HabitsQueryParameters queryParams,SortMappingProvider sortMappingProvider ,CancellationToken cancellationToken)
+    public async Task<ActionResult<PaginationResult<HabitDto>>> GetHabits(HabitsQueryParameters queryParams, SortMappingProvider sortMappingProvider, CancellationToken cancellationToken)
     {
-        if(!sortMappingProvider.ValidateMappings<HabitDto,Habit>(queryParams.Sort))
+        if (!sortMappingProvider.ValidateMappings<HabitDto, Habit>(queryParams.Sort))
         {
             return Problem(
-                statusCode:StatusCodes.Status400BadRequest,
-                detail:$"The sort parameter '{queryParams.Sort}' contains one or more invalid sort fields."
+                statusCode: StatusCodes.Status400BadRequest,
+                detail: $"The sort parameter '{queryParams.Sort}' contains one or more invalid sort fields."
                 );
         }
         string? searchTerm = queryParams.Search?.Trim().ToLowerInvariant();
 
         SortMapping[] sortMappings = sortMappingProvider.GetMappings<HabitDto, Habit>();
 
-        List<HabitDto> habits = await dbContext.Habits.AsNoTracking()
+        IQueryable<HabitDto> habitsQuery = dbContext.Habits.AsNoTracking()
             .Where(x =>
                 searchTerm == null ||
                 EF.Functions.ILike(x.Name, $"%{searchTerm}%") ||
@@ -37,14 +37,13 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
             .Where(x => queryParams.Type == null || x.Type == queryParams.Type)
             .Where(x => queryParams.Status == null || x.Status == queryParams.Status)
             .ApplySort(queryParams.Sort, sortMappings)
-            .Select(x => x.ToDto())
-            .ToListAsync(cancellationToken);
+            .Select(HabitQueries.ProjectToDto());
 
-        var habitsCollection = new HabitsCollectionDto
-        {
-            Data = habits
-        };
-        return Ok(habitsCollection);
+
+
+        var paginationResult = await PaginationResult<HabitDto>.CreateAsync(habitsQuery, queryParams.Page, queryParams.PageSize);
+
+        return Ok(paginationResult);
     }
 
     [HttpGet("{id}")]

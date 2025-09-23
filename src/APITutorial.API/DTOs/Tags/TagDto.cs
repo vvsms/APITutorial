@@ -1,11 +1,7 @@
-﻿using APITutorial.API.Entities;
+﻿using APITutorial.API.DTOs.Habits;
+using APITutorial.API.Entities;
 
 namespace APITutorial.API.DTOs.Tags;
-
-public sealed record TagsCollectionDto
-{
-    public required List<TagDto> Data { get; init; }
-}
 public sealed record TagDto
 {
     public required string Id { get; init; }
