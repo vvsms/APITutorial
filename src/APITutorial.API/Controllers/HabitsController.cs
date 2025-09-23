@@ -1,6 +1,7 @@
 ﻿using APITutorial.API.Database;
 using APITutorial.API.DTOs.Habits;
 using APITutorial.API.Entities;
+using APITutorial.API.Services.Sorting;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.JsonPatch;
@@ -15,9 +16,18 @@ namespace APITutorial.API.Controllers;
 public sealed class HabitsController(ApplicationDbContext dbContext) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<HabitsCollectionDto>> GetHabits(HabitsQueryParameters queryParams, CancellationToken cancellationToken)
+    public async Task<ActionResult<HabitsCollectionDto>> GetHabits(HabitsQueryParameters queryParams,SortMappingProvider sortMappingProvider ,CancellationToken cancellationToken)
     {
+        if(!sortMappingProvider.ValidateMappings<HabitDto,Habit>(queryParams.Sort))
+        {
+            return Problem(
+                statusCode:StatusCodes.Status400BadRequest,
+                detail:$"The sort parameter '{queryParams.Sort}' contains one or more invalid sort fields."
+                );
+        }
         string? searchTerm = queryParams.Search?.Trim().ToLowerInvariant();
+
+        SortMapping[] sortMappings = sortMappingProvider.GetMappings<HabitDto, Habit>();
 
         List<HabitDto> habits = await dbContext.Habits.AsNoTracking()
             .Where(x =>
@@ -26,6 +36,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext) : Controlle
                 (x.Description != null && EF.Functions.ILike(x.Description, $"%{searchTerm}%")))
             .Where(x => queryParams.Type == null || x.Type == queryParams.Type)
             .Where(x => queryParams.Status == null || x.Status == queryParams.Status)
+            .ApplySort(queryParams.Sort, sortMappings)
             .Select(x => x.ToDto())
             .ToListAsync(cancellationToken);
 

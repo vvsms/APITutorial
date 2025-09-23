@@ -1,6 +1,9 @@
 using APITutorial.API.Database;
+using APITutorial.API.DTOs.Habits;
+using APITutorial.API.Entities;
 using APITutorial.API.Extensions;
 using APITutorial.API.Middleware;
+using APITutorial.API.Services.Sorting;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -68,6 +71,8 @@ builder.Logging.AddOpenTelemetry(options =>
     options.IncludeFormattedMessage = true;
 });
 
+builder.Services.AddTransient<SortMappingProvider>();
+builder.Services.AddSingleton<ISortMappingDefinition, SortMappingDefinition<HabitDto, Habit>>(_ => HabitMappings.SortMapping);
 
 
 WebApplication app = builder.Build();
