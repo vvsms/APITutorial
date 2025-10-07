@@ -1,4 +1,5 @@
-﻿using APITutorial.API.Entities;
+﻿using APITutorial.API.DTOs.Common;
+using APITutorial.API.Entities;
 
 namespace APITutorial.API.DTOs.Habits;
 public sealed record HabitDto
@@ -16,6 +17,7 @@ public sealed record HabitDto
     public required DateTime CreatedAtUtc { get; init; }
     public DateTime? UpdatedAtUtc { get; init; }
     public DateTime? LastCompletedAtUtc { get; init; }
+    public List<LinkDto> Links { get; init; } = [];
 }
 
 public sealed record FrequencyDto

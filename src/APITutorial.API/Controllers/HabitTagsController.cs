@@ -12,6 +12,8 @@ namespace APITutorial.API.Controllers;
 [Route("api/habits/{habitId}/tags")]
 public sealed class HabitTagsController(ApplicationDbContext dbContext) : ControllerBase
 {
+    public static readonly string Name = nameof(HabitTagsController).Replace("Controller", string.Empty, StringComparison.Ordinal);
+
     [HttpPut]
     public async Task<ActionResult> UpsertHabitTag(string habitId, UpsertHabitTagDto upsertHabitTagDto, CancellationToken cancellationToken)
     {

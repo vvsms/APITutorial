@@ -16,7 +16,7 @@ using OpenTelemetry.Trace;
 
 namespace APITutorial.API;
 
-public static class DependencyInjection
+public static class DependencyInjectionExtensions
 {
     public static WebApplicationBuilder AddController(this WebApplicationBuilder builder)
     {
@@ -96,10 +96,13 @@ public static class DependencyInjection
         builder.Services.AddHealthChecks();
 
         builder.Services.AddTransient<SortMappingProvider>();
-        
+
         builder.Services.AddSingleton<ISortMappingDefinition, SortMappingDefinition<HabitDto, Habit>>(_ => HabitMappings.SortMapping);
-        
+
         builder.Services.AddTransient<DataShapingService>();
+
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddTransient<LinkService>();
 
         return builder;
     }

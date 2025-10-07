@@ -6,7 +6,7 @@ namespace APITutorial.API.DTOs.Habits;
 public sealed record HabitsQueryParameters
 {
     [FromQuery(Name = "q")]
-    public string? Search { get; init; }
+    public string? SearchTerm { get; init; }
 
     public HabitType? Type { get; init; }
 

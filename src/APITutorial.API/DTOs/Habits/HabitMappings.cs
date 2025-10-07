@@ -1,5 +1,7 @@
-﻿using APITutorial.API.Entities;
+﻿using APITutorial.API.DTOs.Common;
+using APITutorial.API.Entities;
 using APITutorial.API.Services.Sorting;
+using OpenTelemetry.Trace;
 
 namespace APITutorial.API.DTOs.Habits;
 
@@ -32,7 +34,7 @@ public static class HabitMappings
         ]
     };
 
-    public static HabitDto ToDto(this Habit habit)
+    public static HabitDto ToDto(this Habit habit, List<LinkDto>? links = null)
     {
         return new HabitDto
         {
@@ -60,7 +62,8 @@ public static class HabitMappings
             },
             CreatedAtUtc = habit.CreatedAtUtc,
             UpdatedAtUtc = habit.UpdatedAtUtc,
-            LastCompletedAtUtc = habit.LastCompletedAtUtc
+            LastCompletedAtUtc = habit.LastCompletedAtUtc,
+            Links = links is null ? [] : links,
         };
     }
 

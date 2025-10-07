@@ -189,6 +189,10 @@ csharp_prefer_system_threading_lock = true:suggestion
 dotnet_diagnostic.S6966.severity = warning
 
 #### Naming styles ####
+
+# S2326: Unused type parameters should be removed
+dotnet_diagnostic.S2326.severity = suggestion
+
 [*.{cs,vb}]
 
 # Naming rules
@@ -462,3 +466,5 @@ dotnet_diagnostic.S6966.severity = suggestion
 tab_width = 4
 indent_size = 4
 end_of_line = crlf
+dotnet_diagnostic.CA1819.severity = suggestion
+dotnet_diagnostic.CA2227.severity = warning
