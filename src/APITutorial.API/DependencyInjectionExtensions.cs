@@ -1,10 +1,14 @@
-﻿using APITutorial.API.Database;
+﻿using System.Runtime.Serialization;
+using APITutorial.API.Database;
 using APITutorial.API.DTOs.Habits;
 using APITutorial.API.Entities;
 using APITutorial.API.Middleware;
 using APITutorial.API.Services;
 using APITutorial.API.Services.Sorting;
+using Asp.Versioning;
 using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Newtonsoft.Json.Serialization;
@@ -18,7 +22,7 @@ namespace APITutorial.API;
 
 public static class DependencyInjectionExtensions
 {
-    public static WebApplicationBuilder AddController(this WebApplicationBuilder builder)
+    public static WebApplicationBuilder AddApiServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddControllers(options =>
         {
@@ -26,6 +30,32 @@ public static class DependencyInjectionExtensions
         })
             .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
             .AddXmlDataContractSerializerFormatters();
+
+        builder.Services.Configure<MvcOptions>(options =>
+        {
+            NewtonsoftJsonOutputFormatter jsonOutputFormatter = options.OutputFormatters.OfType<NewtonsoftJsonOutputFormatter>().First();
+
+            jsonOutputFormatter.SupportedMediaTypes.Add(CustomMediaTypeNames.Application.JsonV1);
+            jsonOutputFormatter.SupportedMediaTypes.Add(CustomMediaTypeNames.Application.JsonV2);
+            jsonOutputFormatter.SupportedMediaTypes.Add(CustomMediaTypeNames.Application.HateoasJson);
+            jsonOutputFormatter.SupportedMediaTypes.Add(CustomMediaTypeNames.Application.HateoasJsonV1);
+            jsonOutputFormatter.SupportedMediaTypes.Add(CustomMediaTypeNames.Application.HateoasJsonV2);
+        });
+
+
+        builder.Services.AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1.0);
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.ReportApiVersions = true;
+            // options.ApiVersionReader = new UrlSegmentApiVersionReader();
+            options.ApiVersionReader = ApiVersionReader.Combine(
+                new MediaTypeApiVersionReader(),
+                new MediaTypeApiVersionReaderBuilder()
+                    .Template("application/vnd.apitutorial.hateoas.v{version}+json")
+                    .Build());
+        })
+       .AddMvc();
 
         builder.Services.AddOpenApi();
 

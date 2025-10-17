@@ -6,6 +6,7 @@ using APITutorial.API.DTOs.Habits;
 using APITutorial.API.Entities;
 using APITutorial.API.Services;
 using APITutorial.API.Services.Sorting;
+using Asp.Versioning;
 using FluentValidation;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ namespace APITutorial.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[ApiVersion(1.0)]
 public sealed class HabitsController(ApplicationDbContext dbContext, LinkService linkService) : ControllerBase
 {
     [HttpGet]
@@ -23,6 +25,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext, LinkService
         [FromQuery] HabitsQueryParameters queryParams,
         SortMappingProvider sortMappingProvider,
         DataShapingService dataShapingService,
+
         CancellationToken cancellationToken)
     {
         if (!sortMappingProvider.ValidateMappings<HabitDto, Habit>(queryParams.Sort))
@@ -63,6 +66,7 @@ public sealed class HabitsController(ApplicationDbContext dbContext, LinkService
             .Take(queryParams.PageSize)
             .ToListAsync(cancellationToken);
 
+        bool includeLinks = queryParams.Accept?.Contains(CustomMediaTypeNames.Application.HateoasJson, StringComparison.InvariantCultureIgnoreCase) ?? false;
 
         var paginationResult = new PaginationResult<ExpandoObject>
         {
@@ -74,14 +78,16 @@ public sealed class HabitsController(ApplicationDbContext dbContext, LinkService
             PageSize = queryParams.PageSize,
             TotalCount = totalCount
         };
+        if (includeLinks)
 
-        paginationResult?.Links.AddRange(CreateLinksForHabits(queryParams, paginationResult.HasPreviousPage, paginationResult.HasNextPage));
+            paginationResult?.Links.AddRange(CreateLinksForHabits(queryParams, paginationResult.HasPreviousPage, paginationResult.HasNextPage));
 
         return Ok(paginationResult);
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetHabit(string id, string? fields, DataShapingService dataShapingService, CancellationToken cancellationToken)
+    [MapToApiVersion(1.0)]
+    public async Task<IActionResult> GetHabit(string id, string? fields, DataShapingService dataShapingService, [FromHeader(Name = "Accept")] string? accept, CancellationToken cancellationToken)
     {
         if (!dataShapingService.Validate<HabitWithTagsDto>(fields))
         {
@@ -100,12 +106,46 @@ public sealed class HabitsController(ApplicationDbContext dbContext, LinkService
             return NotFound();
         }
         ExpandoObject shapedHabitDto = dataShapingService.ShapeData(habits, fields);
-        List<LinkDto> selfLink = CreateLinksForHabit(id, fields);
+        if (accept == CustomMediaTypeNames.Application.HateoasJson)
+        {
+            List<LinkDto> selfLink = CreateLinksForHabit(id, fields);
 
-        shapedHabitDto.TryAdd("links", selfLink);
-
+            shapedHabitDto.TryAdd("links", selfLink);
+        }
         return Ok(shapedHabitDto);
     }
+
+
+    [HttpGet("{id}")]
+    [ApiVersion(2.0)]
+    public async Task<IActionResult> GetHabitV2(string id, string? fields, DataShapingService dataShapingService, [FromHeader(Name = "Accept")] string? accept, CancellationToken cancellationToken)
+    {
+        if (!dataShapingService.Validate<HabitWithTagsDtoV2>(fields))
+        {
+            return Problem(
+                statusCode: StatusCodes.Status400BadRequest,
+                detail: $"The fields parameter '{fields}' contains one or more invalid fields."
+                );
+        }
+
+        HabitWithTagsDtoV2? habits = await dbContext.Habits
+            .Where(h => h.Id == id)
+            .Select(HabitQueries.ProjectToHabitWithTagsDtoV2())
+            .FirstOrDefaultAsync(cancellationToken);
+        if (habits is null)
+        {
+            return NotFound();
+        }
+        ExpandoObject shapedHabitDto = dataShapingService.ShapeData(habits, fields);
+        if (accept == CustomMediaTypeNames.Application.HateoasJson)
+        {
+            List<LinkDto> selfLink = CreateLinksForHabit(id, fields);
+
+            shapedHabitDto.TryAdd("links", selfLink);
+        }
+        return Ok(shapedHabitDto);
+    }
+     
 
     [HttpPost]
     public async Task<ActionResult<HabitDto>> CreateHabit(CreateHabitDto createHabitDto, IValidator<CreateHabitDto> validator, CancellationToken cancellationToken)

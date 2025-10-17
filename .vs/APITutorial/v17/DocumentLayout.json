@@ -7,36 +7,12 @@
       "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\habitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\habits\\habitsqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\habits\\habitsqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dependencyinjectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dependencyinjectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\controllers\\habittagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\controllers\\habittagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\habits\\habitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\habits\\habitdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\common\\paginationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\common\\paginationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\common\\ilinksresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\common\\ilinksresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|D:\\NavaidhInnovations\\samplesites\\APITutorial\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\dtos\\common\\icollectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\dtos\\common\\icollectionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\services\\datashapingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\services\\datashapingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|d:\\navaidhinnovations\\samplesites\\apitutorial\\src\\apitutorial.api\\services\\custommediatypenames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47445BB-7FE8-48AC-B18D-4FBD9987BD7F}|src\\APITutorial.API\\APITutorial.API.csproj|solutionrelative:src\\apitutorial.api\\services\\custommediatypenames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,32 +24,6 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HabitTagsController.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitTagsController.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\HabitTagsController.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitTagsController.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\Controllers\\HabitTagsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T03:13:39.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HabitsQueryParameters.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Habits\\HabitsQueryParameters.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T03:09:16.788Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -104,92 +54,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomMediaTypeNames.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Services\\CustomMediaTypeNames.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\Services\\CustomMediaTypeNames.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Services\\CustomMediaTypeNames.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\Services\\CustomMediaTypeNames.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T18:11:35.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjectionExtensions.cs",
+              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DependencyInjectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\APITutorial.API\\DependencyInjectionExtensions.cs",
+              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DependencyInjectionExtensions.cs",
+              "RelativeToolTip": "src\\APITutorial.API\\DependencyInjectionExtensions.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAADAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T17:25:42.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HabitsController.cs",
               "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "RelativeDocumentMoniker": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Controllers\\HabitsController.cs",
               "RelativeToolTip": "src\\APITutorial.API\\Controllers\\HabitsController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAqwE0AAACLAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T02:44:00.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HabitDto.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitDto.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Habits\\HabitDto.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Habits\\HabitDto.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Habits\\HabitDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAtwBMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T02:41:38.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": ".editorconfig",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\.editorconfig",
-              "RelativeDocumentMoniker": ".editorconfig",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\.editorconfig",
-              "RelativeToolTip": ".editorconfig",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-07T02:31:56.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ICollectionResponse.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\ICollectionResponse.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Common\\ICollectionResponse.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\ICollectionResponse.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Common\\ICollectionResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T02:27:32.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PaginationResult.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\PaginationResult.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Common\\PaginationResult.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\PaginationResult.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Common\\PaginationResult.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAwAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T02:26:17.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DataShapingService.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Services\\DataShapingService.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\Services\\DataShapingService.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\Services\\DataShapingService.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\Services\\DataShapingService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAEAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T02:16:48.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ILinksResponse.cs",
-              "DocumentMoniker": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\ILinksResponse.cs",
-              "RelativeDocumentMoniker": "src\\APITutorial.API\\DTOs\\Common\\ILinksResponse.cs",
-              "ToolTip": "D:\\NavaidhInnovations\\samplesites\\APITutorial\\src\\APITutorial.API\\DTOs\\Common\\ILinksResponse.cs",
-              "RelativeToolTip": "src\\APITutorial.API\\DTOs\\Common\\ILinksResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T18:23:59.635Z",
+              "WhenOpened": "2025-10-12T17:00:34.707Z",
               "EditorCaption": ""
             }
           ]

@@ -6,7 +6,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.AddController()
+builder.AddApiServices()
     .AddErrorHandling()
     .AddDatabase()
     .AddObservability()
